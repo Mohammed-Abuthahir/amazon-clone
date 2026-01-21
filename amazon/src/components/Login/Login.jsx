@@ -8,7 +8,7 @@ const Login = () => {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [loading, setLoading] = useState(false); // loading state
+  const [loading, setLoading] = useState(false);// loading state
   const [error, setError] = useState("");        // backend error
 
   const handleLogin = async (e) => {
