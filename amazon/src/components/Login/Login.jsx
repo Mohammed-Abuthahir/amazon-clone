@@ -8,26 +8,24 @@ const Login = () => {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [loading, setLoading] = useState(false);// loading state
-  const [error, setError] = useState("");        // backend error
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");        
 
   const handleLogin = async (e) => {
     e.preventDefault();
     setLoading(true);
     setError("");
-
     try {
       const response = await axios.post("http://localhost:8080/api/auth/login", {
         email,
         password
       });
-
-      alert(response.data); // "Login successful"
-      navigate("/");        // Redirect to homepage
+      alert(response.data); 
+      navigate("/");        
 
     } catch (err) {
       if (err.response && err.response.data) {
-        setError(err.response.data); // show backend error
+        setError(err.response.data); 
       } else {
         setError("Login failed. Please try again.");
       }
@@ -35,7 +33,6 @@ const Login = () => {
       setLoading(false);
     }
   };
-
   return (
     <div className="login-container">
       <img
