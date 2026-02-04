@@ -1,85 +1,94 @@
-/* Sidebar */
+/* Sidebar Container */
 .sidebar {
   position: fixed;
   top: 0;
-  left: -400px;
-  width: 400px;
+  left: -450px; /* Slightly narrower for better UX */
+  width: 450px;
   height: 100vh;
-  background: #fff;
-  transition: 0.3s ease;
-  z-index: 10;
-  box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+  background: #ffffff;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1); /* Smoother animation */
+  z-index: 1000;
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
+  font-family: "Amazon Ember", Arial, sans-serif; /* Amazon uses clean sans-serif */
 }
 
 .sidebar.open {
-  left: 0;
+  transform: translateX(360px); /* Using transform is more performant than 'left' */
 }
 
-/* Header stays fixed */
+/* Header Section */
 .sidebar-header {
   flex-shrink: 0;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 15px;
+  font-size: 30px;
+  align-items: center;
+  cursor: pointer;
+  padding: 15px 30px;
   background: #232f3e;
   color: #fff;
-  
-}
-
-/* THIS IS THE MAGIC */
-.sidebar-content {
-  flex: 1;
-  overflow-y: auto;
-}
-
-/* Scrollbar smooth (optional) */
-.sidebar-content::-webkit-scrollbar {
-  width: 6px;
-}
-
-.sidebar-content::-webkit-scrollbar-thumb {
-  background: #ccc;
-  border-radius: 10px;
-}
-
-/* List */
-.sidebar-list {
-  list-style: none;
-
-  padding: 0;
-  margin: 0;
-}
-
-.sidebar-list h2 {
-  font-size: 14px;
-  padding: 15px;
-   padding-left: 60px;
-  background: #f5f5f5;
-  margin: 0;
-  font-size: 20px;
-  
   font-weight: bold;
 }
 
-.sidebar-list li {
-  padding: 15px;
+/* Scrollable Content */
+.sidebar-content {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Section Headings */
+.sidebar-list p {
   font-size: 20px;
+  padding: 20px 110px; /* Strategic spacing */
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: transparent; /* Cleaner than the grey background */
+  color: black;
+  margin: 0;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  border-bottom: 1px solid #eee;
+  font-weight: 600;
+}
+
+/* List Items */
+.sidebar-list li {
+ font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  padding: 14px 30px 14px 110px;
+  font-size: 16px; /* Reduced for professional look */
+  display: flex;
+  justify-content: space-between;
+  color: black;
   cursor: pointer;
-  padding-left: 60px;
+  transition: background 0.2s;
   
 }
 
 .sidebar-list li:hover {
-  background: #f3f3f3;
+  background: #eaeded; /* Subtle grey hover */
+  color: #111;
 }
-.sidebar-header i{
-  border: 2px solid white;
-  padding: 10px;
-  border-radius: 100%;
-  cursor: pointer;
+
+/* Handle Links */
+.sidebar-list a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Custom Scrollbar */
+.sidebar-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.sidebar-content::-webkit-scrollbar-thumb {
+  background: #bbbbbb;
+  border-radius: 4px;
+}
+
+.sidebar-content::-webkit-scrollbar-thumb:hover {
+  background: #999;
 }

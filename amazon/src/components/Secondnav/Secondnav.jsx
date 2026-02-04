@@ -41,31 +41,31 @@ const Secondnav = () => {
   {/* SCROLLABLE CONTENT */}
   <div className="sidebar-content">
     <ul className="sidebar-list">
-      <h2>Digital Contents & Devices</h2>
-      <li>Prime Video</li>
-      <li>Amazon Music</li>
-      <li>Kindle & E-Reader Books</li>
-      <li>Amazon Appstore</li>
+      <p>Digital Contents & Devices</p>
+      <li>Prime Video <i className="fa-solid fa-chevron-right"></i></li>
+      <li>Amazon Music <i className="fa-solid fa-chevron-right"></i></li>
+      <li>Kindle & E-Reader Books <i className="fa-solid fa-chevron-right"></i></li>
+      <li>Amazon Appstore <i className="fa-solid fa-chevron-right"></i></li>
 
-      <h2>Shop by Department</h2>
-      <li>Electronics</li>
-      <li>Computers</li>
-      <li>Smart Home</li>
-      <li>Arts & Crafts</li>
-      <li>See All</li>
+      <p>Shop by Department</p>
+      <li>Electronics <i className="fa-solid fa-chevron-right"></i></li>
+      <li>Computers <i className="fa-solid fa-chevron-right"></i></li>
+      <li>Smart Home <i className="fa-solid fa-chevron-right"></i></li>
+      <li>Arts & Crafts <i className="fa-solid fa-chevron-right"></i></li>
+      <li>See All <i className="fa-solid fa-chevron-right"></i></li>
 
-      <h2>Programs & Features</h2>
-      <li>Gift Cards</li>
-      <li>Shop By Interest</li>
-      <li>Amazon Live</li>
-      <li>International Shopping</li>
+      <p>Programs & Features </p>
+      <li>Gift Cards <i className="fa-solid fa-chevron-right"></i></li>
+      <li>Shop By Interest <i className="fa-solid fa-chevron-right"></i></li>
+      <li>Amazon Live <i className="fa-solid fa-chevron-right"></i></li>
+      <li>International Shopping <i className="fa-solid fa-chevron-right"></i></li>
 
-      <h2>Help & Settings</h2>
-      <li>Your Account</li>
-      <li>English</li>
-      <li>United States</li>
-      <li>Customer Service</li>
-      <Link to={'/login'}><li>Sign in</li></Link>
+      <p>Help & Settings</p>
+      <li>Your Account <i className="fa-solid fa-chevron-right"></i></li>
+      <li>English <i className="fa-solid fa-chevron-right"></i></li>
+      <li>United States <i className="fa-solid fa-chevron-right"></i></li>
+      <li>Customer Service <i className="fa-solid fa-chevron-right"></i></li>
+      <Link to={'/login'}><li>Sign in <i className="fa-solid fa-chevron-right"></i></li></Link>
     </ul>
     </div>
   </div>
