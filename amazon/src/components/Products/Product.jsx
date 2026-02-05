@@ -21,10 +21,11 @@ import img8 from "../../assets/product8.jpg";
 import img9 from "../../assets/product9.jpg";
 import img10 from "../../assets/product10.jpg";
 import img11 from "../../assets/product11.jpg";
+import img12 from "../../assets/product12.jpg";
 
 import { Link } from "react-router-dom";
 
-const bannerImages = [img1, img2, img3, img4, img5, img6, img7, img8 ,img9,img10,img11];
+const bannerImages = [img1, img2, img3, img4, img5, img6, img7, img8 ,img9,img10,img11,img12];
 
 const Product = () => {
   const [index, setIndex] = useState(0);

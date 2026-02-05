@@ -7,6 +7,7 @@ import Register from "./components/Register/Register.jsx";
 import Navbar from "./components/Navbar/Navbar.jsx";
 import Newaccount from "./components/Newaccount/Newaccount.jsx";
 import Sales from "./components/Sales/Sales.jsx";
+import Addtocart from "./components/addtocart/Addtocart.jsx";
 
 
 const router = createBrowserRouter([
@@ -33,8 +34,12 @@ const router = createBrowserRouter([
   {
     path:'/sales',
     element:<Sales/>
+  },
+  {
+    path:'/add-to-cart',
+    element:<Addtocart/>
   }
-  
+
 ]);
 
 createRoot(document.getElementById("root")).render(

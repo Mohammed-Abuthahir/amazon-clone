@@ -30,7 +30,7 @@ const Navbar = () => {
             </div>
             <div className='nav-add-cart'>
                 <i class="fa-solid fa-cart-shopping"></i>
-                <p>Cart</p>
+                <Link to={'/add-to-cart'}><p style={{color:"white"}}>Cart</p></Link>
             </div>
          </div>
     </nav>
