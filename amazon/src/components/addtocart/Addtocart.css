@@ -83,7 +83,7 @@
   position: fixed;
   top: 0;
   right: -420px;   /* Hidden outside screen */
-  width: 350px;
+  width: 300px;
   height: 100vh;
   background: #ffffff;
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
@@ -165,4 +165,139 @@
 .empty-cart {
   padding: 20px;
   color: #777;
+}
+/* Background and Layout */
+.amazon-page-wrapper {
+    background-color: #f3f3f3;
+    min-height: 100vh;
+}
+
+.main-content-container {
+    display: flex;
+    max-width: 1490px;
+    margin: 0 auto;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Left Section Styles */
+.cart-left-column {
+    flex: 3;
+    background-color: white;
+    padding: 20px;
+}
+
+.cart-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.price-label {
+    color: #565959;
+    font-size: 14px;
+}
+
+/* Cart Item Row */
+.amazon-cart-item {
+    display: flex;
+    padding: 30px 0;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.item-img-container img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    margin: 0 15px;
+}
+
+.item-content-info {
+    flex: 1;
+}
+
+.item-title-link {
+    font-size: 18px;
+    color: #007185;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.stock-status {
+    color: #007600;
+    font-size: 12px;
+}
+
+.blue-link {
+    color: #007185;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+/* Utility Buttons */
+.item-utility-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.qty-selector {
+    display: flex;
+    align-items: center;
+    border: 1px solid #d5d9d9;
+    border-radius: 8px;
+    background-color: #f0f2f2;
+    box-shadow: 0 2px 5px rgba(15,17,17,.15);
+}
+
+.qty-icon-btn {
+    border: none;
+    background: transparent;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.qty-num { padding: 0 5px; }
+
+.utility-link {
+    color: #007185;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.divider { color: #ddd; }
+
+/* Right Section Styles */
+.cart-right-column {
+    flex: 1;
+}
+
+.checkout-summary-card {
+    background-color: white;
+    padding: 20px;
+}
+
+.summary-total { font-size: 18px; }
+
+.amazon-yellow-btn {
+    width: 100%;
+    background-color: #ffd814;
+    border: 1px solid #fcd200;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 14px;
+    margin-top: 15px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(213,217,217,.5);
+}
+
+.amazon-yellow-btn:hover { background-color: #f7ca00; }
+
+.bottom-subtotal {
+    text-align: right;
+    padding: 15px;
+    font-size: 18px;
 }

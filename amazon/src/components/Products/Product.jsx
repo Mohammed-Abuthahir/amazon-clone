@@ -1,13 +1,6 @@
 import "./Products.css";
 import { useState } from "react";
-import {
-  productList,
-  productList1,
-  productList2,
-  productList4,
-  productList5,
-  productList6,
-} from "../../data/products";
+import {productList,productList1,productList2,productList4,productList5,productList6,} from "../../data/products";
 import ScrollRow from "./ScrollRow";
 import ProductCard from "./ProductCard";
 import img1 from "../../assets/product1.jpg";
