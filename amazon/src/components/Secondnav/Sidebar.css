@@ -14,6 +14,7 @@
   font-family: "Amazon Ember", Arial, sans-serif; /* Amazon uses clean sans-serif */
 }
 
+
 .sidebar.open {
   transform: translateX(360px); /* Using transform is more performant than 'left' */
 }
@@ -23,7 +24,8 @@
   flex-shrink: 0;
   display: flex;
   justify-content: space-between;
-  font-size: 30px;
+  margin-left: 80px;
+  font-size: 20px;
   align-items: center;
   cursor: pointer;
   padding: 15px 30px;

@@ -1,6 +1,6 @@
 import './Navbar.css';
 import { Link } from 'react-router-dom'; 
-const Navbar = () => {
+const Navbar = ({ setSearchTerm }) => {
   return (
     <>
     <nav id='navbar'>
@@ -14,9 +14,13 @@ const Navbar = () => {
                     </div>
              </div>
             <div className='nav-input'>
-                <p className='Arrow-icon'>All <i class="fa-solid fa-caret-down"></i></p>
-                <input type="text" placeholder='Search Amazon'/>
-            <div className="search-icon"><i  class="fa-solid fa-magnifying-glass"></i></div>
+                <p className='Arrow-icon'>All <i className="fa-solid fa-caret-down"></i></p>
+        <input 
+          type="text" 
+          placeholder='Search Amazon'
+          onChange={(e) => setSearchTerm(e.target.value)} // Capture typing
+        />
+        <div className="search-icon"><i className="fa-solid fa-magnifying-glass"></i></div>
             </div>     
             <div className='nav-region'>
                 <img src="https://cdn.britannica.com/79/4479-050-6EF87027/flag-Stars-and-Stripes-May-1-1795.jpg" alt="" />

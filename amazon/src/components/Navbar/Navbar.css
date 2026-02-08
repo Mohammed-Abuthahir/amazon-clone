@@ -54,6 +54,10 @@
     display: flex;
     border: 2px solid transparent;
 }
+.nav-input input:focus {
+    outline: none;
+    border: 2px solid white; 
+}
 .nav-input p{
    padding: 10px;
    text-align: center;
