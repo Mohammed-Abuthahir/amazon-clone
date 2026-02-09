@@ -57,8 +57,8 @@ const Product = ({ searchiTem }) => {
             style={{ backgroundImage: `url(${bannerImages[index]})` }}
           >
             <p>
-              You are on amazon.com. You can also shop on Amazon India for millions of products...
-              <Link to={"./sales"}><span>Click here to go to amazon.in</span></Link>
+              You are on amazon.com. You can also shop on Amazon India for millions of products . 
+              <Link to={"./sales"}><span style={{ color: "blue", textDecoration: "none" }}>  Click here to go to amazon.in</span></Link>
             </p>
           </div>
           <button className="banner-arrow right" onClick={nextSlide}>
