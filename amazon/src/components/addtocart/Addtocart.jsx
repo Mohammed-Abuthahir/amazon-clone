@@ -3,24 +3,35 @@ import axios from 'axios'
 import Navbar from '../Navbar/Navbar'
 import Secondnav from '../Secondnav/Secondnav'
 import './Addtocart.css'
-import { products } from '../../data/addtocart'
 import Footer from '../Footer/Footer'
 
 const Addtocart = () => {
+  const [products, setProducts] = useState([]) 
   const [cart, setCart] = useState([])
-  const API_URL = "http://localhost:8080/api/cart";
+  const CART_API = "http://localhost:8080/api/cart";
+  const PROD_API = "http://localhost:8080/api/products";
   useEffect(() => {
+    fetchProducts();
     fetchCart();
   }, []);
+  const fetchProducts = async () => {
+    try {
+      const response = await axios.get(PROD_API);
+      setProducts(response.data);
+    } catch (error) {
+      console.error("Error fetching products:", error);
+    }
+  };
 
   const fetchCart = async () => {
     try {
-      const response = await axios.get(API_URL);
+      const response = await axios.get(CART_API);
       setCart(response.data);
     } catch (error) {
       console.error("Error fetching cart:", error);
     }
   };
+
   const addToCart = async (product) => {
     const payload = {
       productId: product.id,
@@ -32,22 +43,22 @@ const Addtocart = () => {
     };
 
     try {
-      const response = await axios.post(`${API_URL}/add`, payload);
+      const response = await axios.post(`${CART_API}/add`, payload);
       setCart([...cart, response.data]);
     } catch (error) {
       alert("Failed to add item to cart");
     }
   }
 
-  
   const removeFromCart = async (dbId) => {
     try {
-      await axios.delete(`${API_URL}/remove/${dbId}`);
+      await axios.delete(`${CART_API}/remove/${dbId}`);
       setCart(cart.filter(item => item.id !== dbId));
     } catch (error) {
       console.error("Error removing item:", error);
     }
   }
+
   const subtotal = cart.reduce((acc, item) => acc + item.price, 0).toFixed(2);
 
   return (
@@ -91,11 +102,6 @@ const Addtocart = () => {
           ))}
         </div>
       </div>
-      <div>
-        <div>
-
-        </div>
-      </div>
       <div className="amazon-page-wrapper">
       <div className="main-content-container">
         <div className="cart-left-column">
@@ -128,7 +134,9 @@ const Addtocart = () => {
                   
                   <div className="item-utility-bar">
                     <div className="qty-selector">
-                      <button className="qty-icon-btn"><i className="fa-solid fa-trash-can"></i></button>
+                      <button className="qty-icon-btn" onClick={() => removeFromCart(item.id)}>
+                        <i className="fa-solid fa-trash-can"></i>
+                      </button>
                       <span className="qty-num">1</span>
                       <button className="qty-icon-btn">+</button>
                     </div>
