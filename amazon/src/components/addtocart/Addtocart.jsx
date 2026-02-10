@@ -3,9 +3,11 @@ import axios from 'axios'
 import Navbar from '../Navbar/Navbar'
 import Secondnav from '../Secondnav/Secondnav'
 import './Addtocart.css'
+import { useNavigate } from 'react-router-dom'
 import Footer from '../Footer/Footer'
 
 const Addtocart = () => {
+  const navigate = useNavigate();
   const [products, setProducts] = useState([]) 
   const [cart, setCart] = useState([])
   const CART_API = "http://localhost:8080/api/cart";
@@ -167,9 +169,12 @@ const Addtocart = () => {
             <label className="gift-check-summary">
               <input type="checkbox" /> This order contains a gift
             </label>
-            <button className="amazon-yellow-btn">
-              Proceed to checkout
-            </button>
+            <button 
+                  className="amazon-yellow-btn" 
+                  onClick={() => navigate('/paymentscart')}
+                >
+        Proceed to checkout
+      </button>
           </div>
 
           <div className="featured-items-mini">

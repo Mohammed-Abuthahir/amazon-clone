@@ -1,0 +1,207 @@
+/* Base Layout */
+.payment-page {
+  background-color: #f0f2f2;
+  min-height: 100vh;
+  /* Using standard sans-serif stack for better cross-platform consistency */
+  font-family: "Amazon Ember", Arial, sans-serif;
+  color: #0f1111;
+  width: 100%;
+}
+
+/* Header - Keeping it dark and professional */
+.payment-header {
+  background-color: #131921;
+  color: white;
+  padding: 12px 0;
+}
+
+.header-content {
+  /* Enforcing the 90% Screen Width */
+  width: 90%; 
+  max-width: 1450px; 
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo {
+    height: 60px;
+  width: 120px;
+  object-fit: cover; /* Ensures JPG fills the 120x60 area without distortion */
+  background-position: center;
+  border-radius: 10px;
+  border: 3px solid transparent;
+  transition: border 0.3s ease;
+
+}
+.cart-icon{
+    font-size: 30px;
+}
+.cart-text{
+    font-size: 25px;
+}
+.header-title {
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.header-title span {
+  font-size: 14px;
+  vertical-align: middle;
+  color: #ccc;
+}
+
+/* Main Container - Centered 90% */
+.payment-container {
+  width: 100%;
+  max-width: 1450px; 
+  margin: 30px auto;
+  display: grid;
+  /* Standard Amazon ratio: Left is much wider than the Summary card */
+  grid-template-columns: 1fr 350px; 
+  gap: 25px;
+  align-items: start;
+}
+
+/* Left Column Styling */
+.checkout-step {
+  background: white;
+  padding: 25px 30px;
+  margin-bottom: 12px;
+  border: 1px solid #d5d9d9;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.checkout-step.inactive {
+  padding: 15px 25px;
+  background-color: #fcfcfc;
+  opacity: 0.8;
+}
+
+.step-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.step-subtitle {
+  font-size: 14px;
+  color: #565959;
+  margin-bottom: 15px;
+}
+
+/* Buttons */
+.amazon-button-primary {
+  width: 100%;
+  background: #ffd814;
+  border: 1px solid #fcd200;
+  border-radius: 8px;
+  padding: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 2px 5px rgba(213,217,217,.5);
+}
+
+.amazon-button-primary:hover {
+  background: #f7ca00;
+  border-color: #f2c200;
+}
+
+.amazon-button-secondary {
+  background: #fbcc12;
+  border: 1px solid #d5d9d9;
+  border-radius: 20px;
+  padding: 10px 30px;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(213,217,217,.04);
+}
+
+.amazon-button-secondary:hover {
+  background-color: #f2c200e0;
+}
+
+/* Sidebar Styling */
+.payment-right-col {
+  position: sticky;
+  top: 20px; /* Card follows user on scroll */
+}
+
+.order-summary-card {
+  background: white;
+  border: 1px solid #d5d9d9;
+  border-radius: 8px;
+  padding: 25px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin: 10px 0;
+  color: #0f1111;
+}
+
+.order-total {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #eee;
+  margin-top: 15px;
+  padding-top: 15px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #B12704; 
+}
+
+
+.legal-footer {
+  font-size: 13px;
+  color: #565959;
+  border: 2px solid #eee;
+  background-color:white;
+  line-height: 1.6;
+  margin-top: 30px;
+  padding: 20px;
+}
+
+.legal-footer a, .back-link {
+  color: #007185;
+  text-decoration: none;
+}
+
+.legal-footer a:hover {
+  text-decoration: underline;
+  color: #c45500;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 15px;
+  font-weight: 700;
+}
+.back-link:hover{
+    color: red;
+    text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+  .payment-container, .header-content {
+    width: 95%; 
+  }
+}
+
+@media (max-width: 850px) {
+  .payment-container {
+    grid-template-columns: 1fr;  
+  }
+  .payment-right-col {
+    position: static;
+    order: -1;
+  }
+}

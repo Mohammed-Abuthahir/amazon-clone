@@ -8,6 +8,7 @@ import Navbar from "./components/Navbar/Navbar.jsx";
 import Newaccount from "./components/Newaccount/Newaccount.jsx";
 import Sales from "./components/Sales/Sales.jsx";
 import Addtocart from "./components/addtocart/Addtocart.jsx";
+import PaymentUI from "./components/payments/paymentUI.jsx";
 
 
 const router = createBrowserRouter([
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
   {
     path:'/add-to-cart',
     element:<Addtocart/>
+  },
+  {
+    path : '/paymentscart',
+    element:<PaymentUI/>
   }
 
 ]);
