@@ -43,7 +43,8 @@ const router = createBrowserRouter([
   {
     path : '/paymentscart',
     element:<PaymentUI/>
-  }
+  },
+ 
 
 ]);
 

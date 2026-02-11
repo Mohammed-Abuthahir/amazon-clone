@@ -125,6 +125,7 @@
 }
 .nav-login p{
     color: white;
+    text-decoration: none;
 }
 .nav-login h3{
     color: white;
