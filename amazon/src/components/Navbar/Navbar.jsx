@@ -27,7 +27,7 @@ const Navbar = ({ setSearchTerm }) => {
                 <h1>EN</h1>
             </div> 
             <div className='nav-login'>
-                <Link to={'/login'}><p>Hello,sign in</p><h3>Accounts & Lists</h3></Link>
+                <Link to={'/login'}><p >Hello,sign in</p><h3>Accounts & Lists</h3></Link>
             </div>
             <div className="nav-return">
                 <Link to={'/register'}><p>Returns</p><h3>& Order</h3></Link>

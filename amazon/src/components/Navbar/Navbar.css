@@ -121,14 +121,17 @@
 .nav-login{
     border: 3px solid transparent;
     padding: 10px;
-
+    
 }
 .nav-login p{
     color: white;
-    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-color: black;
 }
 .nav-login h3{
     color: white;
+    text-decoration: underline;
+    text-decoration-color: black;
 }
 .nav-login:hover{
     border: 3px solid white;
@@ -136,9 +139,13 @@
 }
 .nav-return p{
     color: white;
+      text-decoration: underline;
+    text-decoration-color: black;
 }
 .nav-return h3{
     color: white;
+    text-decoration: underline;
+    text-decoration-color: black;
 }
 .nav-return{
     border: 3px solid transparent;
@@ -160,6 +167,8 @@
 .nav-add-cart p{
     font-size: 19px;
     font-weight: 600;
+      text-decoration: underline;
+      text-decoration-color: black;
 }
 
 .nav-add-cart:hover{
